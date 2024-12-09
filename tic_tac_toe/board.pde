@@ -81,3 +81,13 @@ int checkWinner() {
   return 0;
 }
 
+boolean FullBoard() {
+  for (int row = 0; row < Board_Size; row++) {
+    for (int column = 0; column < Board_Size; column++) {
+      if (board[row][column] == 0) {
+        return false;
+      }
+    }
+  }
+  return true;
+}

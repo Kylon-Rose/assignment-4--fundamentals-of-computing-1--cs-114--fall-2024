@@ -36,3 +36,15 @@ void UserInput(char key) {
   }
 }
 
+//Computer makes move
+void ComputerMove() {
+  for (int row = 0; row < Board_Size; row ++) {
+    for (int column = 0; column < Board_Size; column++) {
+      if (board[row][column] == 0) {
+        board[row][column] = Computer;
+        return;
+      }
+    }
+  }
+}
+

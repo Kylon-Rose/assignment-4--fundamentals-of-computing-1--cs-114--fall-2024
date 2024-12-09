@@ -22,3 +22,13 @@ void createShapes() {
   }
 }
 
+void drawX(int row, int column) {
+  int beginX = column * Cell_Size;
+  int beginY = row * Cell_Size;
+  stroke(255, 0, 0);
+  strokeWeight(3);
+  //Draws X
+  line(beginX + 10, beginY + 10, beginX + Cell_Size - 10, beginY + Cell_Size - 10);
+  line(beginX + Cell_Size - 10, beginY + 10, beginX + 10, beginY + Cell_Size - 10);
+}
+

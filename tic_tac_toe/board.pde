@@ -61,3 +61,23 @@ void GameState() {
   }
 }
 
+int checkWinner() {
+  for (int row = 0; row < Board_Size; row++) {
+    if (board[row][0] != 0 && board[row][0] == board[row][1] && board[row][1] == board[row][2]) {
+      return board[row][0];
+    }
+  }
+  for (int column = 0; column < Board_Size; column++) {
+    if (board[0][column] != 0 && board[0][column] == board[1][column] && board[1][column] == board[2][column]) {
+      return board[0][column];
+    }
+  }
+  if (board[0][0] != 0 && board[0][0] == board[1][1] && board[1][1] == board[2][2]) {
+    return board[0][0];
+  }
+  if (board[0][2] != 0 && board[0][2] == board[1][1] && board[1][1] == board[2][0]) {
+    return board[0][2];
+  }
+  return 0;
+}
+

@@ -32,3 +32,17 @@ void drawX(int row, int column) {
   line(beginX + Cell_Size - 10, beginY + 10, beginX + 10, beginY + Cell_Size - 10);
 }
 
+void drawO(int row, int column) {
+  int centerX = column * Cell_Size + Cell_Size / 2; //center x-coordinate
+  int centerY = row * Cell_Size + Cell_Size / 2; //center y-coordinate
+  stroke(0, 0, 255);
+  strokeWeight(3);
+  noFill();
+  
+  ellipse(centerX, centerY, Cell_Size - 20, Cell_Size - 20);
+}
+  
+
+
+  
+    

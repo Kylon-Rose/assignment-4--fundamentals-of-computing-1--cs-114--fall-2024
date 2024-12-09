@@ -48,3 +48,16 @@ void ComputerMove() {
   }
 }
 
+void GameState() {
+  int winner = checkWinner();
+  if (winner != 0) {
+    gameEnds = true;
+    println(winner == Computer ? "The Computer Wins!" : "You win!!!");
+  } else if (FullBoard()) {
+    gameEnds = true;
+    println("It's a draw!");
+  } else {
+    println("The game is ongoing.");
+  }
+}
+
